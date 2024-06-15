@@ -1,0 +1,25 @@
+def calculator():
+    a = float(input("введите первое число: "))
+    b = float(input("введите второе число: "))
+    operation = input("что делать? (+, -, *, /): ")
+    result = 0
+    if operation == ("+"):
+        result = a + b
+    elif operation == ("-"):
+        result = a - b
+    elif operation == ("*"):
+        result = a * b
+    elif operation == ("/"):
+        result = a / b
+    else:
+        print("ошибка! Символ не найден!")
+    
+    print(f"результат вычислений {result}")
+
+def starts():
+    start = input("запуститьт калькулятор?: ")
+    if start == ("да"):
+        calculator()
+        starts()
+
+starts()
